@@ -1,0 +1,41 @@
+# Task: JBCert Development
+
+- [x] Initial Environment Setup
+    - [x] Project structure (frontend, backend-node, backend-python)
+    - [x] Boilerplate for all three services
+- [x] Certificate Generation Feature
+    - [x] Implement PDF generation in Python (FastAPI + ReportLab)
+    - [x] Implement API Gateway in Node.js (Express)
+    - [x] Create React frontend form
+    - [x] Refactor API logic into `api.ts`
+    - [/] Verify end-to-end integration
+    - [ ] Fix potential Content-Type mismatch between Frontend (JSON) and Node Backend (expected Form/Multer)
+    - [ ] Add error handling and validation
+- [x] Phase 2: Dashboard & Bulk Generation
+    - [x] Core Infrastructure
+        - [x] Implement Simple Authentication (Node Backend + React Context)
+        - [x] Setup Template Management (List and selection)
+    - [x] UI/UX Redesign (Premium/Minimalist)
+        - [x] Create Modern Dashboard Layout
+        - [x] Implement Template Selection Popup
+        - [x] Add PDF Preview Component
+    - [x] Features
+        - [x] Single Certificate Generation Flow
+        - [x] Bulk Certificate Generation Flow
+        - [x] Build ZIP Generation in Node Backend
+        - [x] Dynamic Input fields for Bulk (10 default + add more)
+    - [/] Verification
+        - [x] Test Auth flow
+        - [ /] Verify Overview Redesign
+        - [/] Verify ZIP download
+        - [/] Manual UI Walkthrough
+- [x] Post-V1 Enhancements
+    - [x] Redesign Dashboard Overview (Staggered glass layout)
+    - [x] Refine Overview Layout (70/30 Performance Hub split)
+    - [x] Enhance Backend Security (JWT Middleware)
+    - [x] Push to GitHub (JBCertv1)
+- [ ] Phase 3: Advanced Customization & User Management
+    - [ ] Dynamic Template Uploads (Support for adding new certificate images)
+    - [ ] Name Area Mapping (UI to specify where names should appear on new templates)
+    - [ ] Super Admin Dashboard (User Management / RBAC)
+    - [ ] Role Based Access (Differentiate between Admin and Trainer)
