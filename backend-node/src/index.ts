@@ -10,22 +10,6 @@ import path from "path";
 
 dotenv.config();
 
-import mongoose from "mongoose";
-
-const MONGO_URI = process.env.MONGO_URI;
-
-if (!MONGO_URI) {
-    console.error("MONGO_URI is not defined ❌");
-    process.exit(1);
-}
-
-mongoose.connect(MONGO_URI)
-    .then(() => console.log("MongoDB Connected ✅"))
-    .catch((err) => {
-        console.error("MongoDB Connection Error ❌", err);
-        process.exit(1);
-    });
-
 const app = express();
 const upload = multer();
 
