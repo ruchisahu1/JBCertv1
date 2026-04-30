@@ -134,3 +134,17 @@ app.listen(PORT, () => {
     console.log(`Consolidated JBCert server running on port ${PORT}`);
 });
 
+// API routes FIRST
+app.use("/api", apiRoutes);
+
+// ✅ Correct absolute path
+const distPath = path.resolve(__dirname, "../dist");
+
+// ✅ Serve frontend files
+app.use(express.static(distPath));
+
+// ✅ React router fallback (VERY IMPORTANT)
+app.get("*", (req, res) => {
+    res.sendFile(path.join(distPath, "index.html"));
+});
+
