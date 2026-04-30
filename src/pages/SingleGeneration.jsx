@@ -30,7 +30,10 @@ export default function SingleGeneration() {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`
                 },
-                body: JSON.stringify({ studentName, template: selectedTemplate }),
+                body: JSON.stringify({
+                    studentName,
+                    template: selectedTemplate
+                })
             });
 
             if (!res.ok) throw new Error("Generation failed");

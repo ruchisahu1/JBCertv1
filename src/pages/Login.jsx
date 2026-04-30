@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-    const [email, setEmail] = useState("admin@example.com");
-    const [password, setPassword] = useState("admin123");
+    const [email, setEmail] = useState("admin@jb.com");
+    const [password, setPassword] = useState("!!admin))");
     const [error, setError] = useState("");
     const { login } = useAuth();
     const navigate = useNavigate();
