@@ -1,0 +1,31 @@
+# Walkthrough: Unified Monolithic Refactor
+
+I have successfully refactored JBCertv1 into a single, unified project. This makes deployment and local development significantly easier.
+
+## 🌟 What's New?
+- **One Project, One Command:** You no longer need to manage two folders. All dependencies and scripts are now in the root `package.json`.
+- **Automatic Deployment:** Running `npm run build` followed by `npm start` is all you need to deploy the full app.
+- **Improved Dev Experience:** `npm run dev` now starts both the backend and frontend simultaneously with hot-reloading.
+
+## 🛠️ Changes Made
+1.  **Restructured Directories:**
+    - `src/`: Contains the React frontend.
+    - `server/`: Contains the Node.js backend.
+    - `assets/`: Centralized folder for certificate templates.
+2.  **Unified Configuration:**
+    - Merged `package.json` into a single root file.
+    - Combined `.env` into a single configuration file.
+    - Created a unified `tsconfig.json`.
+3.  **Code Updates:**
+    - Updated `server/index.ts` to use relative paths for templates and the `dist/` folder.
+    - Fixed ESM-related issues (like `__dirname` not being defined) to ensure the server runs smoothly on modern Node.js versions.
+
+## ✅ Verification Results
+- **Frontend Build:** `npm run build` successfully creates a production bundle in `dist/`.
+- **Backend Serving:** The server successfully serves the frontend on `localhost:3001`.
+- **API Connectivity:** Verified that the frontend can talk to the backend for login and PDF generation.
+
+## 🚀 How to use it now:
+1.  **Install:** `npm install`
+2.  **Run Dev:** `npm run dev`
+3.  **Build & Start:** `npm run build` then `npm start`
